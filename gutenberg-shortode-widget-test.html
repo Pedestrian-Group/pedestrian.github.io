@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shortcode Widget</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css"> </head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container"> <a class="navbar-brand" href="index.html">Pedestrian Technical Tests</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<!--             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Available Tests
+              </a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="gutenberg-sidebar-test.html">Gutenberg Sidebar</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Shortcode Widget</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container my-5">
+		<h1>Technical Test: Shortcode Weather Widget - UI Focus</h1>
+		<div class="col-lg-8 px-0 mt-5">
+			<h2>Summary</h2>
+			<hr>
+			<p>The purpose of this exercise is for us to get a sense of your ability to accurately translate a design into well written, semantic HTML/CSS and how you would approach designing and implementing a front end solution for a simple JavaScript widget.</p>
+			<p>There is no time limit for this test, but we expect most applicants to complete the requirements in roughly 3-4 hours.</p>
+			<p>You should not use any framework or library for the CSS</p>
+			<p>If you make any assumptions about requirements, or use any online resources to solve a problem, please make note of these somewhere obvious inside the solution (e.g. code comments).</p>
+			<p>Your solution will be evaluated internally by your potential co-workers. You should expect a response from us within two business days.</p>
+		</div>
+		<div class="col-lg-8 px-0 mt-5">
+			<h2 class="mt-5">Requirements</h2>
+			<hr>
+			<p>Using the design below, create a “weather widget” Shortcode that allows editors to set up a widget inside of posts or pages.</p>
+			<img src="/images/image-widget.png" class="img-fluid" alt="widget">
+		</div>
+		<div class="card col-lg-8 px-0 mt-5">
+			<div class="card-header">The Shortcode Plugin</div>
+			<div class="card-body">
+				<p>The plugin must create a Shortcode to be used by the editors. This Shortcode must include the following attributtes:</p>
+				<ol class="list-group list-group-numbered">
+					<li class="list-group-item">Title</li>
+					<li class="list-group-item">Unit: metric or imperial</li>
+					<li class="list-group-item">Show Wind: true or false</li>
+				</ol>
+			</div>
+		</div>
+		<div class="card col-lg-8 px-0 mt-5">
+			<div class="card-header">The Widget</div>
+			<div class="card-body">
+				<p>The widget itself should be a piece of JavaScript that reads the end user’s current location using <code class="language-plaintext highlighter-rouge">navigator.geolocation</code>, 
+					and retrieves the current weather conditions for that location using the <a href="http://openweathermap.org/current" target="_blank">Open Weather Map API</a>.
+				</p>
+				<p>The data the widget displays is determined by the attributes in the Shortcode.</p>
+			</div>
+		</div>
+		<div class="card col-lg-8 px-0 mt-5">
+			<div class="card-header">Tips </div>
+			<div class="card-body">
+				<p>Focus on accurately translating the design into semantic, accessible HTML/CSS before moving onto the JavaScript functionality.</p>
+				<p>Follow the WordPress standars to create the plugin:</p>
+				<p><a href="https://developer.wordpress.org/plugins/intro/" target="_blank">Introduction to Plugin Development</a></p>
+				<p><a href="https://developer.wordpress.org/plugins/shortcodes/">Shortcodes</a></p>
+			</div>
+		</div>
+		<div class="col-lg-8 px-0 mt-5">
+			<h2 class="mt-5">What we’re looking for</h2>
+			<hr>
+			<ol class="list-group list-group-numbered">
+				<li class="list-group-item">Semantically excellent HTML.</li>
+				<li class="list-group-item">A focus on accessibility.</li>
+				<li class="list-group-item">Handcrafted, well structured CSS. No frameworks or toolkits used.</li>
+				<li class="list-group-item">Accuracy in translating the design into code.</li>
+				<li class="list-group-item">This plugin should be validated by PHP_CodeSniffer rules (sniffs) for WordPress. It ensures code quality and adherence to coding conventions, especially the official WordPress Coding Standards.</li>
+				<li class="list-group-item">We prefer that you send us a link to a GitHub repository.</li>
+			  </ol>
+		</div>
+		<div class="col-lg-8 px-0 mt-5">
+			<h2 class="mt-5">Deliverables</h2>
+			<hr>
+			<p>All acceptance criteria should be met (to the best of your ability and time available). A link to your repo should be sent to: pauline.grech@pedestriangroup.com.au</p>
+		</div>
+	</div>
+	<footer class="py-3 my-4">
+		<p class="text-center text-muted">© 2022 Pedestrian Group PTY Ltd.</p>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
