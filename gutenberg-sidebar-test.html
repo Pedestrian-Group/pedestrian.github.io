@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gutenberg Sidebar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Pedestrian Technical Tests</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!--             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Available Tests
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Gutenberg Sidebar</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+
+      <h1>Technical Test: Gutenberg Sidebar</h1>
+
+      <div class="col-lg-8 px-0 mt-5">
+
+        <h2>Summary</h2>
+        <hr>
+        <p>
+            The purpose of this exercise is for us to get a sense of how you would approach designing and implementing a simple WordPress integration before the next interview. 
+            We’re avoiding tricky algorithmic tests in favor of something that shows us how you approach problems and organise a codebase, via some of our actual product requirements.
+        </p>
+        <p>There is no time limit for this test, but we expect most applicants to complete the requirements in roughly 3-4 hours.</p>
+        <p>If you make any assumptions about requirements, or use any online resources to solve a problem, please make note of these in your code comments.</p>
+        <p>Your solution will be evaluated internally by your potential co-workers. You should expect a response from us within two business days.</p>
+      </div>
+
+      <div class="card col-lg-8 px-0 mt-5">
+        <div class="card-header">
+            User Story
+        </div>
+        <div class="card-body">
+          <p class="card-text">As an editor or journalist, I can access advertising features in a single location So I can easily find all advertising-related settings.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-8 px-0 mt-5">
+      <h2 class="mt-5">Acceptance criteria</h2>
+      <hr>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item">In the Gutenberg/Block Editor, a new custom panel is visible in the sidebar for the standard “post” type.</li>
+        <li class="list-group-item">The custom panel title is “Advertising Settings”.</li>
+        <li class="list-group-item">Three fields appear in the custom panel, their requirements are outlined below.</li>
+        <li class="list-group-item">These fields should be disabled while post is being saved/updated/published.</li>
+      </ol>
+    </div>
+
+    <div class="card col-lg-8 px-0 mt-5">
+        <div class="card-header">
+            Field 1: Advertisements
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Label:</strong> “Advertisements”</li>
+                <li class="list-group-item"><strong>Type:</strong> Toggle control</li>
+                <li class="list-group-item"><strong>Default:</strong> On</li>
+              </ul>
+        </div>
+      </div>
+
+      <div class="card col-lg-8 px-0 mt-5">
+        <div class="card-header">
+            Field 2: Commercial content type
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Label:</strong> “Commercial content type”</li>
+                <li class="list-group-item"><strong>Type:</strong> Radio control</li>
+                <li class="list-group-item"><strong>Options:</strong> “None”, “Sponsored content”, “Partnered content” and “Brought to you by”</li>
+                <li class="list-group-item"><strong>Default:</strong> “None”</li>
+              </ul>
+        </div>
+      </div>
+
+      <div class="card col-lg-8 px-0 mt-5">
+        <div class="card-header">
+            Field 3: Advertiser name
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Label:</strong> “Advertiser name”</li>
+                <li class="list-group-item"><strong>Type:</strong> Text control</li>
+                <li class="list-group-item"><strong>Visibility:</strong> The advertiser name field is hidden while “None” is the selected commercial content type</li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-8 px-0 mt-5">
+        <h2 class="mt-5">Bonus</h2>
+        <hr>
+        <p>The following tasks are not required, but nice to have:</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Test WordPress environment to be hosted and publicly accessible (with username/password).</li>
+          <li class="list-group-item">Local environment is ideally run via Docker.</li>
+          <li class="list-group-item">Frontend code is ideally Typescript.</li>
+          <li class="list-group-item">Code has unit and/or functional tests.</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-8 px-0 mt-5">
+        <h2 class="mt-5">Deliverables</h2>
+        <hr>
+        <p>All acceptance criteria should be met (to the best of your ability and time available). A link to your repo should be sent to: pauline.grech@pedestriangroup.com.au</p>
+      </div>
+
+    </div>
+    <footer class="py-3 my-4">
+        <p class="text-center text-muted">© 2022 Pedestrian Group PTY Ltd.</p>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
